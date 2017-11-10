@@ -1,5 +1,5 @@
 ---
     applications:
-    - name: eloquent-hopper
+    - name: team-webpage
       memory: 128M
-      host: eloquent-hopper
+      host: team-webpage
