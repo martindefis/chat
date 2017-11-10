@@ -12,6 +12,7 @@ app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/fonts'));
 app.use('/fonts', express.static(__dirname + '/node_modules/bootstrap/dist/fonts'));
 
+let port = process.env.PORT || process.env.VCAP_APP_PORT || 8080;
 
 
 app.get('/', function(req, res){
@@ -19,7 +20,7 @@ app.get('/', function(req, res){
 });
 
 
-server.listen(3000, function(){
+server.listen(port, function(){
   console.log('listening on *:3000');
 });
 
